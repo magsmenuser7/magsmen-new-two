@@ -3,7 +3,7 @@
 <meta name="description" content="Magsmen is the best way to increase your brand growth. We offer brand consulting, Online brand management, and more. Contact us today and get a free audit for your brand">
 <meta name="keywords" content="brand consultant">
 
-{% extends 'uifiles/base.html' %}
+{% extends 'uifiles/base-two.html' %}
 {% load static %}
 {% block content %}
 
@@ -35,13 +35,13 @@
                                     </div>
                                 </div>
 
-                                <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
-                                    <span>What we do</span>
-                                </a>
-
-                                <a href="portfolio-1.html" class="mil-link mil-muted mil-arrow-place">
+                                <a href="gallery/" class="mil-button mil-arrow-place mil-btn-space">
                                     <span>View works</span>
                                 </a>
+
+                                <!-- <a href="portfolio-1.html" class="mil-link mil-muted mil-arrow-place">
+                                    <span>View works</span>
+                                </a> -->
 
                                 <div class="mil-circle-text">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
@@ -73,16 +73,29 @@
                             <div class="col-lg-6 col-xl-5">
 
                                 <div class="mil-mb-90">
-                                    <h2 class="mil-up mil-mb-60">Discover <br>Our <span class="mil-thin">Studio</span></h2>
-                                    <p class="mil-up mil-mb-30">At our design studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.</p>
+                                    <h2 class="mil-up mil-mb-60">Discover <br>Our <span class="mil-thin">Magsmen</span></h2>
 
-                                    <p class="mil-up mil-mb-60">Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.</p>
+                                    <p class="mil-up mil-mb-30">
+                                        Get more from your brand. We're your strategic partner, offering expert
+                                        guidance to propel your brand forward.
+                                    </p>
+
+                                    <p class="mil-up mil-mb-60">Already have marketing muscle? We complement your team, providing the
+                                        missing piece for a truly impactful brand strategy. 
+                                    </p>
+
+                                    <p class="mil-up mil-mb-30">
+                                        We combine in-depth analysis with powerful storytelling to
+                                        ensure your
+                                        brand stands out in the market.
+                                    </p>
+
 
                                     <div class="mil-about-quote">
                                         <div class="mil-avatar mil-up">
-                                            <img src="{% static 'img/faces/customers/1.jpg' %}" alt="Founder">
+                                            <img src="{% static 'assets/img/photo/sandeep-pic-icon.jpg' %}" alt="Founder">
                                         </div>
-                                        <h6 class="mil-quote mil-up">Passionately Creating <span class="mil-thin">Design Wonders:</span> Unleashing <span class="mil-thin">Boundless Creativity</span></h6>
+                                        <h6 class="mil-quote mil-up">Passionately Creating <span class="mil-thin">Brand Wonders:</span> Unleashing <span class="mil-thin">Boundless Creativity</span></h6>
                                     </div>
                                 </div>
 
@@ -92,7 +105,7 @@
                                 <div class="mil-about-photo mil-mb-90">
                                     <div class="mil-lines-place"></div>
                                     <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
-                                        <img src="{% static 'assets/img/photo/1.jpg' %}" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
+                                        <img src="{% static 'assets/img/icons/monogram-wise-owl.png' %}" alt="monogram-wise-owl" class="mil-scale" data-value-1="1" data-value-2="1.2">
                                     </div>
                                 </div>
 
@@ -103,8 +116,8 @@
                 <!-- about end -->
 
                 <!-- services -->
-                <section class="mil-dark-bg">
-                    <div class="mi-invert-fix">
+                <section class="mil-dark-bg ourservices-info">
+                    <div class="mi-invert-fix mi-fix-invert">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
                             <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px"></div>
@@ -122,51 +135,51 @@
 
                                 <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
 
-                                    <span class="mil-text-image"><img src="{% static 'img/photo/2.jpg' %}" alt="team"></span>
+                                    <span class="mil-text-image"><img src="{% static 'assets/img/photo/unique-ideas.jpg' %}" alt="team"></span>
                                     <h2 class="mil-h1 mil-muted mil-center">Unique <span class="mil-thin">Ideas</span></h2>
 
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
 
-                                    <h2 class="mil-h1 mil-muted mil-center">For Your <span class="mil-thin">Business.</span></h2>
-                                    <a href="services.html" class="mil-services-button mil-button mil-arrow-place"><span>What we do</span></a>
+                                    <h2 class="mil-h1 mil-muted mil-center">Your Brand<span class="mil-thin"> Business.</span></h2>
+                                    <a href="expertise/" class="mil-services-button mil-button mil-arrow-place"><span>What we do</span></a>
 
                                 </div>
                             </div>
 
-                            <div class="row mil-services-grid m-0">
+                            <div class="row mil-services-grid mil-grid-services grid-services-mil m-0">
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Branding and <br>Identity Design</h5>
-                                        <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <a href="brand-consulting/" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Brand Consulting</h5>
+                                        <p class="mil-light-soft mil-mb-30">Transform your business into a brand powerhouse with Magsmen. Because in this game, strategy is everything.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
                                     </a>
 
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Website Design <br>and Development</h5>
-                                        <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <a href="personal-brand-consulting/" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Personal Brand Consulting</h5>
+                                        <p class="mil-light-soft mil-mb-30">Harness the magic of your personal brand with Magsmen by your side.because even kings have their royal advisors.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
                                     </a>
 
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Advertising and <br>Marketing Campaigns</h5>
-                                        <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <a href="brand-creation/" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Brand Creation</h5>
+                                        <p class="mil-light-soft mil-mb-30">Turn your ideas into reality in 90 days with Brand Creation—from concept to creation. Because every unique brand deserves a unique approach!</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
                                     </a>
 
                                 </div>
                                 <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
 
-                                    <a href="service.html" class="mil-service-card-sm mil-up">
-                                        <h5 class="mil-muted mil-mb-30">Creative Consulting <br>and Development</h5>
-                                        <p class="mil-light-soft mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <a href="link-fluence/" class="mil-service-card-sm mil-up">
+                                        <h5 class="mil-muted mil-mb-30">Link Fluence</h5>
+                                        <p class="mil-light-soft mil-mb-30">LinkFluence by Magsmen is our bespoke LinkedIn consulting solution, designed to transform the professional presence of C-level executives, influencers, and brands.</p>
                                         <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
                                     </a>
 
@@ -178,7 +191,7 @@
                 <!-- services end -->
 
                 <!-- team -->
-                <section>
+                <!-- <section>
                     <div class="container mil-p-120-30">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-lg-5 col-xl-4">
@@ -204,7 +217,7 @@
                                         <div class="col-sm-6">
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/1.jpg' %}" alt="Team member">
+                                                <img src="{% static 'assets/img/faces/team-1.jpg' %}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Anna Oldman</a></h5>
@@ -220,7 +233,7 @@
                                             </div>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/3.jpg' %}" alt="Team member">
+                                                <img src="{% static 'assets/img/faces/team-2.jpg' %}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Oscar Freeman</a></h5>
@@ -241,7 +254,7 @@
                                             <p class="mil-mobile-hidden mil-text-sm mil-mb-30" style="height: 30px;"><span class="mil-accent">*</span> The founders of our agency</p>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/2.jpg' %}" alt="Team member">
+                                                <img src="{% static 'assets/img/faces/team-3.jpg' %}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Emma Newman</a></h5>
@@ -257,7 +270,7 @@
                                             </div>
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img src="{% static 'img/faces/4.jpg' %}" alt="Team member">
+                                                <img src="{% static 'assets/img/faces/team-4.jpg' %}" alt="Team member">
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
                                                         <h5 class="mil-muted mil-mb-5"><a href="home-2.html">Lisa Trueman</a></h5>
@@ -280,7 +293,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- team end -->
 
                 <!-- reviews -->
@@ -312,56 +325,67 @@
                                 </svg>
 
                                 <div class="swiper-container mil-reviews-slider">
-                                    <div class="swiper-wrapper">
+                                    <div class="swiper-wrapper swiper-wrapper-team-slide">
                                         <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10"> Nikitha Muvva</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Business Analyst</p>
+                                                <p class="mil-text-xl mil-up"> “Telugu Foods is a renowned brand in over 24+ countries with more than a million happy
+                                                    customers. We hired Magsmen for brand consulting and help us build a digital strategy for
+                                                    Telugu Foods.”</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">Manickavel</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Chairman & Managing Director</p>
+                                                <p class="mil-text-xl mil-up"> “We have been associated with Magsmen for the last two years. They helped our brand Triplex, a
+                                                    pioneer in the detergent market from the last 30 years enter into the digital space and proposed us
+                                                    a digital strategy.”</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">Kranthi Kiran</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">International Business Manager</p>
+                                                <p class="mil-text-xl mil-up"> “Thanks to Magsmen. They've introduced the concept of brand architecture and a whole new
+                                                    strategy for VSB. Starting with corporate Rebranding, we've experienced a new phase for VSB
+                                                    Group with their impeccable initiatives on branding and also tailored strategy on Linked which
+                                                    have tripled our followers ”</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <!-- <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p> -->
+                                                <p class="mil-text-xl mil-up">“The education and insight Magsmen provided for our brand's identity, placement, and modifications were beyond what any
+                                                    consulting firm has offered us. They are the true problem-solvers in consulting, effortlessly addressing our challenges
+                                                    and transforming our brand ”</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <!-- <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p> -->
+                                                <p class="mil-text-xl mil-up">“Television Actor: 'Magsmen is my go-to solution for my reputation management. The depth of validation and research they conduct is unparalleled. Collaborating with them has not only transformed my brand but also revolutionized my ideology on business strategies. Additionally, their rebranding of Suma Filmy Arts and the creation of the new production house, Maheswari Movies, are nothing short of stunning. Their innovative approaches and meticulous attention to detail have truly set a new standard in the industry.”</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">Krishna Prasad.N.V</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">General Manager</p>
+                                                <p class="mil-text-xl mil-up">“We've hired Magsmen as our brand consultants in March 2021. Thanks to their wonderful
+                                                    strategy of bringing a new phase to the brand. We've seen a whole new Tenali Double Horse, a
+                                                    redefined vision for the brand.  ”</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
                                                 <p class="mil-text-xl mil-up">This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.</p>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Sarah Newman</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Envato market</p>
-                                                <p class="mil-text-xl mil-up">This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.</p>
-                                            </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -372,30 +396,139 @@
                 </section>
                 <!-- reviews end -->
 
-                <!-- partners -->
-                <div class="mil-soft-bg">
+            <!-- partners -->
+                <section>
                     <div class="container mil-p-0-120">
-
                         <div class="swiper-container mil-infinite-show mil-up">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg' %}" alt="logo"></a>
+                            <div class="swiper-wrapper swiper-wrapper-slide">
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-clients-sweathatelugufoods-168x168.png' %}" alt="telugu-foods" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-clients-colors-168x168.png' %}" alt="surya-colors" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-clients-tenalidoublehorse-168x168.png' %}" alt="tenali-double-horse" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-clients-triplexxx-168x168.png' %}" alt="triplex" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-clients-vsb-168x168.png' %}" alt="vsb" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/suma-filmy-arts-two.png' %}" alt="suma-filmy-arts" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/34.png' %}" alt="instant-foods" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/suma-kanakala-two.png' %}" alt="suma-kanakala" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/cargil.png' %}" alt="cargil" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/logo4.png' %}" alt="19builders" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsen-our-partner-jayalakshmi-168x168.png' %}" alt="jayalakshmi" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/pronted.png' %}" alt="prontend" />
+                                </div>
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/chakrasiddh.png' %}" alt="Chakrasiddh" />
+                                </div>
+
+                                <div class="swiper-slide swiper-slide-item">
+                                    <img src="{% static 'assets/img/brand-logos-two/magsmen-homepage-zavaine-clients.png' %}" alt="zavaine" />
+                                </div>
+
+                                <!-- <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-sweathatelugufoods-168x168.png' %}" alt="Telugu"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg' %}" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-colors-168x168.png' %}" alt="suryacolors"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'img/partners/1.svg' %}" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-tenalidoublehorse-168x168.png' %}" alt="tenalidoublehorse"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'img/partners/2.svg' %}" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 60px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-triplexxx-168x168.png' %}" alt="triplex"></a>
                                 </div>
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-vsb-168x168.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/suma-filmy-arts.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/34.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/suma-kanakala.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/cargil.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsmen-homepage-clients-zavane-168x168.png' %}" alt="logo"></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/logo4.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsen-our-partner-jayalakshmi-168x168.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/pronted.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/chakrasiddh.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsen-our-partner-rootcap-lion-168x168.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsen-our-partner-rootcap-logo-168x168.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/magsen-our-partner-mvr-logo-168x168.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/6.png' %}" alt="logo"></a>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/BD-Logo.png' %}" alt="logo"></a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 100px;"><img src="{% static 'assets/img/brand-logos/17.png' %}" alt="logo"></a>
+                                </div> -->
                             </div>
                         </div>
 
                     </div>
-                </div>
+                </section>
                 <!-- partners end -->
+
+                
+
+                
 
                 <!-- blog -->
                 <section>
@@ -406,26 +539,27 @@
                             </div>
                             <div class="col-lg-6 mil-mb-30">
                                 <div class="mil-adaptive-right mil-up">
-                                    <a href="blog.html" class="mil-link mil-dark mil-arrow-place">
+                                    <a href="blog/" class="mil-link mil-dark mil-arrow-place">
                                         <span>View all</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
+                            {% for blogitem in blog_list %}
                             <div class="col-lg-6">
 
-                                <a href="publication.html" class="mil-blog-card mil-mb-60">
+                                <a href="/blog-details/{{blogitem.Sluglink}}" class="mil-blog-card mil-mb-60">
                                     <div class="mil-cover-frame mil-up">
-                                        <img src="{% static 'img/blog/1.jpg' %}" alt="cover">
+                                        <img src="{{blogitem.Image1.url}}" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
-                                            <div class="mil-label mil-upper mil-accent">TECHNOLOGY</div>
-                                            <div class="mil-label mil-upper">may 24 2023</div>
+                                            <div class="mil-label mil-upper mil-accent">{{blogitem.Category}}</div>
+                                            <div class="mil-label mil-upper">{{blogitem.Create_at}}</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">How to Become a Graphic Designer in 10 Simple Steps</h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
+                                        <h4 class="mil-up mil-mb-30">{{blogitem.Title}}</h4>
+                                        <p class="mil-post-text mil-up mil-mb-30">{{blogitem.Description}}</p>
                                         <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Read more</span>
                                         </div>
@@ -433,11 +567,12 @@
                                 </a>
 
                             </div>
-                            <div class="col-lg-6">
+                            {% endfor %}
+                            <!-- <div class="col-lg-6">
 
                                 <a href="publication.html" class="mil-blog-card mil-mb-60">
                                     <div class="mil-cover-frame mil-up">
-                                        <img src="{% static 'img/blog/2.jpg' %}" alt="cover">
+                                        <img src="{% static 'assets/img/blog/2.jpg' %}" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -452,9 +587,16 @@
                                     </div>
                                 </a>
 
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
                 <!-- blog end -->
+
+            </div>
+        </div>
+        <!-- content -->
+
+
+        
 {% endblock %}

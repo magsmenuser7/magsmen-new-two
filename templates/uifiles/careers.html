@@ -1,0 +1,58 @@
+
+{% extends 'uifiles/base-two.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- banner -->
+                <div class="mil-inner-banner mil-p-0-120">
+                    <div class="mil-banner-content mil-up">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
+                        </div>
+                        <div class="container">
+                            <ul class="mil-breadcrumbs mil-breadcrumbs-title mil-mb-60">
+                                <li><a href="/">Homepage</a></li>
+                                <li><a href="/career/">Careers</a></li>
+                            </ul>
+                            <h1 class="mil-mb-60">We're <span class="mil-thin">Hiring</span> <br><span class="mil-thin"></span></h1>
+                            <!-- <a href="#blog" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
+                                <span>Publications</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- banner end -->
+
+                <section class="pb-5">
+                    <div class="container">
+                        <div class="row">
+                            {% for item in career_job %}
+                            <div class="col-lg-4">
+                                <div class="card career-card">
+                                    <div class="card-header card-title">{{item.ExpertiseName}}</div>
+            
+                                    <a href="/apply/" class="apply-btn">
+                                        <span>Apply Now</span>
+                                    </a>
+                                    <!-- <a href="/applyform/" class="apply-btn">Apply Now</a> -->
+                
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+        <!-- content -->
+
+
+ 
+
+{% endblock %}

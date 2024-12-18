@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1(1h+eo85+(5p+kj490ob_*1w1g5p2ow2dsonhtoy_9q@(yh+x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,8 @@ else:
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_ROOT = os.path.join(BASE_DIR,'upload')
+
+
 
 
 

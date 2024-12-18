@@ -1,0 +1,82 @@
+{% extends 'uifiles/base-two.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- banner -->
+                <div class="mil-inner-banner mil-p-0-120">
+                    <div class="mil-banner-content mil-center mil-up">
+                        <div class="container">
+                            <ul class="mil-breadcrumbs mil-breadcrumbs-title mil-center mil-mb-60">
+                                <li><a href="/">Homepage</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                            </ul>
+                            <h1 class="mil-mb-60">Get in touch!</h1>
+                            <a href="#contact" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
+                                <span>Send message</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- banner end -->
+
+                <!-- map -->
+                <div class="mil-map-frame mil-up">
+                    <div class="mil-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.2249463389244!2d80.42503527466117!3d16.311446532909017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a755aed1edb2d%3A0xf0fcdfb624d11870!2sMagsmen%20Brand%20Consultants%20-%20create%20your%20brand%20in%2090%20days!5e0!3m2!1sen!2sin!4v1723204216472!5m2!1sen!2sin"
+                            width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <!-- map end -->
+
+                <!-- contact form -->
+                <section id="contact">
+                    <div class="container mil-p-120-90">
+                        <h3 class="mil-center mil-up mil-mb-120">Fuel your next big idea with a cup-coffee at <span class="mil-thin">Magsmen!</span></h3>
+                        <form class="row align-items-center" id="contactsbmt" method="post">
+                            {% csrf_token %}
+                            <div class="col-lg-6 mil-up">
+                                <input type="text" name="name" id="name" placeholder="What's your name">
+                            </div>
+                            <div class="col-lg-6 mil-up">
+                                <input type="email" name="email" id="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-lg-6 mil-up">
+                                <input type="text" name="phone" id="phone" placeholder="Your Phone">
+                            </div>
+                            <div class="col-lg-6 mil-up">
+                                <input type="text" name="subject" id="subject" placeholder="Your Subject">
+                            </div>
+                            <div class="col-lg-12 mil-up">
+                                <textarea name="message" id="message" placeholder="Tell us about our project"></textarea>
+                            </div>
+                            <!-- <div class="col-lg-8">
+                                <p class="mil-up mil-mb-30"><span class="mil-accent">*</span> We promise not to disclose your personal information to third parties.</p>
+                            </div> -->
+                            <div class="col-lg-4">
+                                <div class="mil-adaptive-right mil-up mil-mb-30 mil-right-adaptive">
+                                    <button type="button" id="sendbtn" class="mil-button mil-arrow-place">
+                                        <span>Send message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- contact form end -->
+
+
+
+            </div>
+        </div>
+        <!-- content -->
+    </div>
+    <!-- wrapper end -->
+
+{% endblock %}
