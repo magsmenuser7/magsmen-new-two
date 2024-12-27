@@ -15,8 +15,8 @@
                             <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
                         </div>
                         <div class="container">
-                            <ul class="mil-breadcrumbs mil-mb-60">
-                                <li><a href="home-1.html">Homepage</a></li>
+                            <ul class="mil-breadcrumbs mil-breadcrumbs-title mil-mb-60">
+                                <li><a href="/">Homepage</a></li>
                                 <li><a href="/gallery/">Media</a></li>
                             </ul>
                             <h4 class="mil-mb-60">Explore diverse facets of branding through our latest <span class="mil-thin">insights and visionary concepts.</span> <br> Gain profound knowledge about the essential <span class="mil-thin">elements that empower a brand's success.</span></h4>
@@ -46,7 +46,7 @@
                         <div class="row">
                             {% for mediaitem in media_items %}
                             <div class="col-lg-6">
-                                <a href="http://www.google.com" class="mil-blog-card mil-mb-60">
+                                <a href="/{{mediaitem.Url}}" class="mil-blog-card mil-mb-60">
                                     <div class="mil-cover-frame mil-up">
                                         <img src="{{mediaitem.Image.url}}" alt="cover">
                                     </div>

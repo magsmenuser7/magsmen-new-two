@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
+SITE_ID = 2
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'ckeditor',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'corsheaders',
+    'rest_framework',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +59,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = [
+    'https://intalks.in',  # Correct
 ]
 
 ROOT_URLCONF = 'magsmen.urls'

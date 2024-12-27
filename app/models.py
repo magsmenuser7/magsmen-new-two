@@ -35,8 +35,14 @@ class BlogPost(models.Model):
     Create_at = models.DateTimeField(default=datetime.now)
     status = models.IntegerField(choices=STATUS, default=0)
 
+
+
+    # def get_absolute_url(self):
+    #     return reverse('blog-details', args=[str(self.Sluglink)])
+    
     def get_absolute_url(self):
-        return reverse('blog-details', args=[str(self.Sluglink)])
+        from django.urls import reverse
+        return reverse('blog-details', args=[self.Sluglink])
 
     class Meta:
         ordering = ['-Create_at']
@@ -74,7 +80,7 @@ class CareerInfo(models.Model):
 class ApplyForm(models.Model):
     Name = models.CharField(max_length=100)
     Email = models.EmailField(max_length=50)
-    Phone = models.CharField(max_length=10)
+    Phone = models.CharField(max_length=10,null=True,blank=True)
     SelectCategory = models.CharField(max_length=100)
     Location = models.CharField(max_length=100)
     Uploadfile = models.FileField(upload_to='uploads/')
@@ -137,3 +143,27 @@ class Subscribe(models.Model):
      def __str__(self):
           return self.Email
      
+
+
+class IntalksForm(models.Model):
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField(max_length=50)
+    Contact = models.CharField(max_length=10)
+    City = models.CharField(max_length=10)
+    Reason_to_connect = models.CharField(max_length=10)
+    # created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.Name
+    
+
+
+
+class PortfolioPopupSubmission(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=50)
+    phone = models.CharField(max_length=10)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

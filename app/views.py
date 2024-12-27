@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost,ContactData,Media,StepformData,Subscribe,CareerInfo,ApplyForm
+from .models import BlogPost,ContactData,Media,StepformData,Subscribe,CareerInfo,ApplyForm,IntalksForm,PortfolioPopupSubmission
 from django.core.paginator import Paginator
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
@@ -12,7 +12,32 @@ from magsmen import settings
 import os
 
 
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import ContactSerializer
+
+
 # Create your views here.
+
+
+
+@api_view(['POST'])
+def contact_api_view(request):
+    if request.method == 'POST':
+        serializer = ContactSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"success": "Contact saved successfully!"}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
+@api_view(['GET'])
+def get_contacts(request):
+    contacts = IntalksForm.objects.all()  # Replace 'Contact' with your model name
+    serializer = ContactSerializer(contacts, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 
 def home(request):
@@ -56,6 +81,35 @@ def subscribe(request):
 
     # Redirect to the home page for invalid request methods
     return HttpResponseRedirect('/?error=Invalid request method.')
+
+
+@csrf_exempt
+def submit_form(request):
+    if request.method == 'POST':
+        popname = request.POST.get('popname')
+        popemail = request.POST.get('popemail')
+        popphone = request.POST.get('popphone')
+
+        # Save the data to the database
+        portfolio_submission = PortfolioPopupSubmission(
+            name=popname,
+            email=popemail,
+            phone=popphone
+        )
+        portfolio_submission.save()
+
+        # Send an email
+        send_mail(
+            subject="Magsmen Portfolio Form Submission",
+            message=f"Name: {popname}\nEmail: {popemail}\nPhone: {popphone}",
+            from_email="connectmagsmen@gmail.com",
+            recipient_list=['connectmagsmen@gmail.com','kajasuresh522@gmail.com'],
+            fail_silently=False,
+        )
+
+        return JsonResponse({'message': 'Portfolio submitted successfully!'})
+
+    return JsonResponse({'error': 'Invalid request'}, status=400)
 
 
 
@@ -270,7 +324,17 @@ def cancellation_and_refund_policy(request):
 def faqs(request):
     return render(request,'uifiles/faqs.html')
 
+def accessyourbrand(request):
+    return render(request,'uifiles/access-your-brand.html')
 
+
+def magsmen_brand_portfolio(request):
+    pdf_filename = 'owl-Magsmen-Brand-Presentation.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename}"'
+    return response
 
 
 def Newsletter(request):
@@ -358,4 +422,10 @@ def the_power_of_consistency_why_brand_tone_matters(request):
     return response
 
 
-
+def a_cutting_edge_approach_in_branding(request):
+    pdf_filename_ten = 'a-cutting-edge-approach-in-branding-compressed.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_ten)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename_ten}"'
+    return response

@@ -1050,3 +1050,75 @@ $(function () {
     });
 
 });
+
+
+
+
+
+
+// portfolio popup submission
+$(document).ready(function () {
+    $('#popupbtn').click(function () {
+
+        // Retrieve field values
+        let popname = $('#popname').val();
+        let popemail = $('#popemail').val();
+        let popphone = $('#popphone').val();
+        let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]').val();
+
+        // Regular expressions for validation
+        let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        let phonePattern = /^[0-9]{10}$/; // Adjust for your phone number format
+
+        // Validation for required fields
+        if (!popname.trim()) {
+            alert("Name field is required");
+            return;
+        }
+        if (!popemail.trim()) {
+            alert("Email field is required");
+            return;
+        }
+        if (!emailPattern.test(popemail)) {
+            alert("Invalid email format");
+            return;
+        }
+        if (!popphone.trim()) {
+            alert("Phone field is required");
+            return;
+        }
+        if (!phonePattern.test(popphone)) {
+            alert("Invalid phone format. Please enter a 10-digit phone number.");
+            return;
+        }
+
+        // Prepare FormData
+        let data = new FormData();
+        data.append("popname", popname);
+        data.append("popemail", popemail);
+        data.append("popphone", popphone);
+        data.append('csrfmiddlewaretoken', csrfmiddlewaretoken);
+
+        // Send data to the server via AJAX
+        $.ajax({
+            url: 'submit-form/',
+            method: 'POST',
+            processData: false,
+            contentType: false,
+            cache: false,
+            mimeType: "multipart/form-data",
+            data: data,
+
+            success: function (response) {
+                $('#popup-form')[0].reset(); // Reset the form on success
+                alert('Form submitted successfully');
+                window.location.href = '/media/owl-Magsmen-Brand-Presentation.pdf';
+            },
+            error: function (xhr, status, error) {
+                alert('There was an error submitting the form. Please try again.');
+                console.error('Error:', xhr.responseText);
+            }
+        });
+    });
+});
+

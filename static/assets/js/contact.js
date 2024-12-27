@@ -361,3 +361,263 @@ $(document).ready(function () {
     })
 
 })
+
+
+
+
+
+
+
+
+
+// get started form
+
+function writetousbtn(){
+
+    var fname = document.getElementById("fname").value.trim();
+    var femail = document.getElementById("femail").value.trim();
+    var fphone = document.getElementById("fphone").value.trim();
+   
+   if(fname === ''){
+       alert("Name Field Required");
+       return;
+   }
+   if(femail === ''){
+       alert("Email Field Required");
+       return;
+   }
+   if (!isValidEmail(femail)) {
+       alert("Invalid Email Format");
+       return;
+   }
+   
+   if(fphone === ''){
+       alert("Phone Field Required");
+       return;
+   }
+   
+   if (!isValidPhone(fphone)) {
+       alert("Invalid Phone Number Format");
+       return;
+   }
+   
+   
+   
+       let formdata = {
+           fname: fname,
+           femail: femail,
+           fphone: fphone,
+       };
+   
+       let formDataJson = JSON.stringify(formdata);
+       localStorage.setItem('formdata', formDataJson);
+       window.location.href = 'questions/';
+   
+   }
+   function isValidEmail(email) {
+       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       return emailPattern.test(email);
+   }
+   function isValidPhone(phone) {
+       const phonePattern = /^\d{10}$/; // Adjust pattern according to your requirement
+       return phonePattern.test(phone);
+   }
+   
+   
+   
+   $(document).ready(function(){
+       $('#allformssubmit').click(function(event){
+           event.preventDefault();
+           let brandpositionradio = $('input[name="brandpositionradio"]:checked').val();
+           let mission = $('#mission').val()
+           let brandtargetradio = $('input[name="brandtargetradio"]:checked').val();
+           let engagebrandradio = $('input[name="engagebrandradio"]:checked').val();
+           let brandperform = $('#brandperform').val()
+           let brandchallenge = $('#brandchallenge').val()
+           // let brandcheck = $('input[name=brandcheck]:checked').map(function(){
+           //     return $(this).val();
+           // }).get();
+           var motivations = [];
+           $('input[name="brandcheck"]:checked').each(function() {
+               motivations.push($(this).val());
+           });
+           let achieve = $('#achieve').val()
+           let brandexpectation = $('#brandexpectation').val()
+           let storedFormDataJson = localStorage.getItem('formdata');
+           let storedFormData = JSON.parse(storedFormDataJson);
+           let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]').val()
+           
+           
+   
+   
+   
+           let data = new FormData();
+           data.append('brandposition',brandpositionradio),
+           data.append('corevalue',mission),
+           data.append('brandtarget',brandtargetradio),
+           data.append('customerfeedback',engagebrandradio),
+           data.append('brandperform',brandperform),
+           data.append('brandchallenge',brandchallenge),
+           data.append('brandcheck',motivations),
+           data.append('achieve',achieve),
+           data.append('brandexpectation',brandexpectation),
+           data.append('storedFormData', JSON.stringify(storedFormData));
+           data.append('csrfmiddlewaretoken',csrfmiddlewaretoken),
+   
+           $.ajax({
+               url:"/questions/",
+               method: 'POST',
+               processData:false,
+               contentType:false,
+               cache:false,
+               data:data,
+               success:function(data, status,xhr){
+                   $('#userAccountSetupForm')[0].reset();
+                   if(data.success === true){
+                       alert("All Done.Thank You")
+                       window.location.href ='/';
+                   }else{
+                       alert(data.error)
+                       window.location.href = '/questions/'
+                   }
+               },
+               error:function(data){
+                   alert("fail, submitted data")
+               }
+               
+           })
+   
+       })
+       
+   })
+   
+   
+   // Select all checkboxes
+   document.getElementById('checkall').addEventListener('change', function () {
+       const checkboxes = document.querySelectorAll('input[name="brandcheck"]');
+       checkboxes.forEach((checkbox) => {
+           checkbox.checked = this.checked;
+       });
+   });
+   
+   
+   // Enable/disable Next button based on input validation
+   document.querySelectorAll('input[type="text"], textarea').forEach((input) => {
+       input.addEventListener('input', function () {
+           const nextBtn = document.querySelector(`button[step_number="${currentStep + 1}"]`);
+           if (this.value.trim() !== '') {
+               nextBtn.disabled = true;
+           } else {
+               nextBtn.disabled = false;
+           }
+       });
+   });
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // portfolio popup functionality
+//    $(document).ready(function () {
+//     $('#popupbtn').click(function {
+        
+//         // Retrieve field values
+//         let popname = $('#popname').val();
+//         let popemail = $('#popemail').val();
+//         let popphone = $('#popphone').val();
+//         let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]').val();
+
+//         // Regular expressions for validation
+//         let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+//         let phonePattern = /^[0-9]{10}$/; // Adjust for your phone number format
+
+//         // Validation for required fields
+//         if (popname === "") {
+//             alert("Name field is required");
+//             return;
+//         }
+//         if (popemail === "") {
+//             alert("Email field is required");
+//             return;
+//         }
+//         if (!emailPattern.test(popemail)) {
+//             alert("Invalid email format");
+//             return;
+//         }
+//         if (popphone === "") {
+//             alert("Phone field is required");
+//             return;
+//         }
+//         if (!phonePattern.test(popphone)) {
+//             alert("Invalid phone format. Please enter a 10-digit phone number.");
+//             return;
+//         }
+
+
+
+
+//         let data = new FormData();
+//         data.append("popname", popname);
+//         data.append("popemail", popemail);
+//         data.append("popphone", popphone);
+//         data.append('csrfmiddlewaretoken', csrfmiddlewaretoken)
+
+
+
+
+
+//         // If validation passes, you can send data to the server (e.g., via AJAX)
+
+//         $.ajax({
+//             url: 'submit-form/',
+//             method: 'POST',
+//             processData: false,
+//             contentType: false,
+//             cache: false,
+//             mimeType: "multipart/form-data",
+//             data:data,
+
+
+//             success: function (response) {
+//                 alert('Form submitted successfully');
+//                 $('#popup-form')[0].reset(); // Reset the form on success
+//             },
+//             error: function (error) {
+//                 alert('There was an error submitting the form. Please try again.');
+//             }
+//         });
+//     });
+// });
+
+
+
+// // portfolio popup functionality
+//    document.getElementById('popup-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     const formData = new FormData(this);
+
+//     fetch('/submit-form/', {
+//         method: 'POST',
+//         body: formData,
+//         headers: {
+//             'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         alert(data.message || data.error);
+//     })
+//     .catch(error => console.error('Error:', error));
+// });
+
