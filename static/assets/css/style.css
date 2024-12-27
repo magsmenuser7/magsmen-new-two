@@ -4812,8 +4812,8 @@ html.is-animating .mil-menu-frame {
 .popup-form {
   display: none;
   position: fixed;
-  top: 40%;
-  left: 90%;
+  top: 50%;
+  left: 130%;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 10px !important;
