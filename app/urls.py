@@ -5,6 +5,7 @@ contact,Ourmedia,Questionsform,subscribe,privacy_policy,terms_conditions,cancell
 Newsletterthree,BrandRefresh,DigitalTwin_BrandStrategy,Monochromatic_colors_in_branding,band_corner_the_new_age_of_buying_brand_activism,\
 brand_naming_unlock_the_soul_of_your_brand,the_power_of_consistency_why_brand_tone_matters,career,apply_form,magsmen_brand_portfolio,\
 a_cutting_edge_approach_in_branding,accessyourbrand,submit_form
+from .views import *
 
 
 from django.contrib.sitemaps.views import sitemap
@@ -64,6 +65,7 @@ urlpatterns = [
     path('brand-naming-unlock-the-soul-of-your-brand/',brand_naming_unlock_the_soul_of_your_brand,name="brand-naming-unlock-the-soul-of-your-brand"),
     path('the-power-of-consistency-why-brand-tone-matters/',the_power_of_consistency_why_brand_tone_matters,name="the-power-of-consistency-why-brand-tone-matters"),
     path('a-cutting-edge-approach-in-branding/',a_cutting_edge_approach_in_branding,name="a-cutting-edge-approach-in-branding"),
+    path('brand_corner_trademarks_and_deceptive_practices/',brand_corner_trademarks, name='brand_corner_trademarks_and_deceptive_practices'),
     path('sitemap.xml/',sitemap,{'sitemaps':sitemaps},name='django.contrib.sitemaps.views.sitemap'),
     # path('sitemap.xml/', TemplateView.as_view(template_name='sitemap.xml', content_type='application/xml')),
     path('robots.txt',TemplateView.as_view(template_name="uifiles/robots.txt", content_type="text/plain")),
