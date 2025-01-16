@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+# '93.127.199.26','magsmen.in','www.magsmen.in'
 # Application definition
 
 SITE_ID = 2
